@@ -1,0 +1,23 @@
+.social {
+  width: 144px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__button {
+  background: url('../img/sprites.png') center top no-repeat;
+  width: 30px;
+  height: 20px;
+}
+
+.social__button--vkontakte {
+  background-position: -154px 0;
+}
+
+.social__button--instagram {
+  background-position: -210px 0;
+}
+
+.social__button--facebook {
+  background-position: -267px 0;
+}

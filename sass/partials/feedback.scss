@@ -1,0 +1,147 @@
+.feedback {
+  width: $screen-mobile;
+  background: $color-teal url("../img/feedback-bg-mobile.jpg") center top no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-tablet) {
+    width: $screen-tablet;
+    background-image: url("../img/feedback-bg-tablet.jpg");
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+    background-image: url("../img/feedback-bg-desktop.jpg");
+  }
+}
+
+.feedback__wrapper {
+  @include container;
+  max-width: 320px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  padding-top: 61px;
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 45px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.feedback__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-family: "PT Serif Caption";
+  font-weight: normal;
+  font-size: 26px;
+  color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.feedback__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feedback__item {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 39px;
+  padding-bottom: 24px;
+  align-items: center;
+  background-color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    width: 480px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-right: 20px;
+  }
+}
+
+.feedback__item--active {
+  display: flex;
+}
+
+.feedback__item--active:nth-child(2) {
+  @media (max-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.feedback__picture {
+  width: 80px;
+  height: 80px;
+  margin-top: -24px;
+}
+
+.feedback__name {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 13px;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/sprites.png") no-repeat;
+    background-position: -111.0000228881836px -14.000003814697266px;
+  }
+}
+
+.feedback__text {
+  margin-top: 6px;
+  margin-bottom: 0;
+  width: 240px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $screen-tablet) {
+    width: 420px;
+  }
+}
+
+.feedback__date {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.feedback__button {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-white;
+  border: 2px solid $color-white;
+  background-color: $color-teal;
+
+  &:hover {
+    color: $color-teal;
+    background-color: $color-white;
+  }
+}

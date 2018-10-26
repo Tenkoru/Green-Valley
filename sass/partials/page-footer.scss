@@ -1,0 +1,58 @@
+.page-footer {
+  @include container;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    justify-content: space-between;
+  }
+}
+
+.page-footer__left {
+  margin-top: 50px;
+  font-size: 14px;
+
+  @media (max-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.page-footer__center {
+  margin-top: 27px;
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.page-footer__right {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 50px;
+  font-size: 14px;
+
+  @media (max-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.page-footer__tel {
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-orange;
+  }
+}
+
+.page-footer__email {
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-orange;
+  }
+}

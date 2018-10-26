@@ -1,0 +1,62 @@
+.page-header {
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $screen-desktop) {
+    border-bottom: 1px solid $color-lighterGrey;
+  }
+
+}
+
+.page-header__contacts {
+  display: none;
+  text-align: left;
+
+  @media (min-width: $screen-desktop) {
+    display: block;
+  }
+}
+
+.page-header__calendar {
+  display: none;
+  position: relative;
+  background-color: $color-orange;
+  color: $color-white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 20px;
+  padding-left: 43px;
+
+  &:hover {
+    background-color: $color-darkOrange;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-calendar.png");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: block;
+  }
+}
+
+.page-header__contacts-link {
+  display: block;
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: $color-black;
+}
+
+.page-header__address {
+  font-size: 14px;
+}

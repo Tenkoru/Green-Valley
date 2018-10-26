@@ -1,0 +1,120 @@
+.offers {
+  @include container;
+  max-width: $screen-mobile;
+  padding-top: 42px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 30px;
+
+  @media (min-width: $screen-tablet) {
+    max-width: $screen-tablet;
+    padding-top: 40px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: $container-desktop;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 45px;
+  }
+}
+
+.offers__title {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "PT Serif Caption";
+  font-weight: normal;
+  font-size: 26px;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 30px;
+  }
+}
+
+.offers__slider {
+  margin-top: 30px;
+}
+
+.offers__item {
+  display: none;
+  min-height: 300px;
+  background: url('../img/offers-bg-mobile.jpg') center top no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-tablet) {
+    background-image: url('../img/offers-bg-tablet.jpg');
+  }
+
+  @media (min-width: $screen-desktop) {
+    background-image: url('../img/offers-bg-desktop.jpg');
+    min-height: 340px;
+  }
+}
+
+.offers__item--active {
+  display: flex;
+}
+
+.offers__item-info {
+  box-sizing: border-box;
+  width: 295px;
+  margin-top: 157px;
+  margin-bottom: 25px;
+  padding-top: 17px;
+  padding-right: 19px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 200px;
+    margin-bottom: 20px;
+    width: 350px;
+  }
+}
+
+.offers__item-title {
+  margin: 0;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $color-orange;
+
+  @media (min-width: $screen-desktop) {
+    font-size: 14px;
+  }
+}
+
+.offers__item-description {
+  margin: 0;
+  margin-top: 3px;
+  line-height: 20px;
+}
+
+.offers__buttons {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0;
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 30px;
+  }
+}
+
+.offers__button {
+  @include clear-button;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: $color-white;
+  border: 2px solid $color-orange;
+  border-radius: 50%;
+}
+
+.offers__button--active {
+  background-color: $color-orange;
+}

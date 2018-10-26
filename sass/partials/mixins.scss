@@ -1,0 +1,31 @@
+@mixin simple-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $container-mobile;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $screen-tablet) {
+    max-width: $container-tablet;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: $container-desktop;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@mixin clear-button {
+  border: none;
+  background-color: transparent;
+}
+

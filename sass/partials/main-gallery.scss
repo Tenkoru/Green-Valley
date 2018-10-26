@@ -1,0 +1,19 @@
+.main-gallery {
+  width: $screen-mobile;
+  height: 260px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background: red;
+
+  @media (min-width: $screen-tablet) {
+    width: $screen-tablet;
+    height: 400px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: $container-desktop;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 616px;
+  }
+}

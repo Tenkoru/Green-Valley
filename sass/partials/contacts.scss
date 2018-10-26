@@ -1,0 +1,99 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: $screen-mobile;
+  padding-top: 38px;
+  padding-bottom: 55px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 15px;
+    max-width: $screen-tablet;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: $screen-desktop;
+    padding-top: 65px;
+    padding-right: 10px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+  }
+}
+
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+  width: 280px;
+  text-align: center;
+  font-family: "PT Serif Caption";
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 400px;
+}
+
+.contacts__map-content {
+  width: 100%;
+  height: 400px;
+}
+
+.contacts__item {
+  width: 280px;
+  position: relative;
+  margin-top: 40px;
+  padding-top: 45px;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent url('../img/sprites.png') center top no-repeat;
+  }
+
+  @media (min-width: $screen-tablet) {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 500px;
+  }
+}
+
+.contacts__item--bus {
+  &::before {
+    background-position: 0 -148.00000381469727px ;
+    width: 50px;
+    height: 29px;
+  }
+}
+
+.contacts__item--train {
+  margin-top: 11px;
+
+  &::before {
+    background-position: 0 -451.00000381469727px ;
+    width: 58px;
+    height: 26px;
+  }
+}
+
+.contacts__item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.contacts__item-list {
+  @include simple-list;
+}

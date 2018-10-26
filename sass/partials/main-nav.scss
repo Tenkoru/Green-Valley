@@ -1,0 +1,123 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 90px;
+
+  @media (min-width: $screen-desktop) {
+    flex-direction: row;
+    width: 1180px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav__item {
+  display: block;
+  min-height: 50px;
+
+  @media (min-width: $screen-desktop) {
+    display: inline-block;
+  }
+}
+
+.main-nav__item--logo {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid $color-lighterGrey;
+
+  @media (min-width: $screen-desktop) {
+    border-bottom: none;
+    width: 143px;
+  }
+}
+
+.main-nav__list {
+  display: none;
+  @include simple-list;
+
+  @media (min-width: $screen-desktop) {
+    display: block;
+  }
+}
+
+.main-nav__list--active {
+  display: block;
+}
+
+.main-nav__link {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid  $color-lighterGrey;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $color-black;
+
+  &:hover {
+    color: $color-orange;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border: none;
+  }
+}
+
+.main-nav__list--active {
+  display: flex;
+}
+
+.main-nav__button {
+  @include clear-button;
+
+  display: block;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 32px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: $color-orange;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
+}
+
+.main-nav__button-element {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  top: 50%;
+  right: 0;
+  background-color: $color-orange;
+  transform: translateY(-50%);
+}

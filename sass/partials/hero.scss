@@ -1,0 +1,92 @@
+.hero {
+  background: $color-white url('../img/hero-bg-mobile.jpg') center top no-repeat;
+
+  @media (min-width: $screen-tablet) {
+    background-image: url('../img/hero-bg-tablet.jpg');
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+    background-image: url('../img/hero-bg-desktop.jpg');
+  }
+}
+
+.hero__wrapper {
+  @include container;
+  min-height: 300px;
+  max-width: 320px;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $screen-tablet) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    min-height: 341px;
+    max-width: $container-desktop;
+    padding-top: 90px;
+  }
+}
+
+.hero__info {
+  background-color: $color-white;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 4px;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 600px;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-family: "PT Serif Caption";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.4;
+
+  @media (min-width: $screen-tablet) {
+    display: inline;
+    font-size: 36px;
+    background-color: $color-white;
+  }
+}
+
+.hero__divider {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+    content: "";
+    height: 25px;
+  }
+}
+
+.hero__text {
+  line-height: 1.45;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 18px;
+    line-height: 22px;
+    background-color: $color-white;
+  }
+}
+
+.hero__text-br {
+  display: none;
+}

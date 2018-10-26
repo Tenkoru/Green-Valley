@@ -1,0 +1,150 @@
+.rest {
+  @include container;
+  padding-top: 10px;
+  text-align: center;
+  background: $color-white url('../img/rest-bg-mobile.jpg') center top no-repeat;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 30px;
+    background-image: url('../img/rest-bg-tablet.jpg');
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 30px;
+    background-image: url('../img/rest-bg-tablet.jpg');
+  }
+}
+
+.rest__button {
+  @include clear-button;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  position: relative;
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #838383;
+
+  &:hover {
+    color: $color-orange;
+    cursor: pointer;
+  }
+}
+
+.rest__button--active {
+  color: $color-orange;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: $color-orange;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.rest__content {
+  display: none;
+  padding-top: 53px;
+  padding-bottom: 95px;
+  letter-spacing: 0.6px;
+
+  @media (min-width: $screen-tablet) {
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-bottom: 85px;
+  }
+}
+
+.rest__content--active {
+  display: block;
+}
+
+.rest__title {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 26px;
+  font-family: "PT Serif Caption";
+  font-weight: 400;
+  line-height: 1.2;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 30px;
+  }
+}
+
+.rest__text {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.rest__items {
+  @include simple-list;
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.rest__item {
+  width: 80px;
+  min-height: 80px;
+  margin-left: 27px;
+  margin-right: 27px;
+  margin-bottom: 27px;
+
+  @media (max-width: $screen-desktop) {
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+}
+
+.rest__item-image {
+  width: 80px;
+  height: 80px;
+  background: transparent left top no-repeat;
+}
+
+.rest__item-text {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.rest__item-image--swiming-pool {
+  background-image: url('../img/rest-swiming_pool.png');
+}
+
+.rest__item-image--sport {
+  background-image: url('../img/rest-sport.png');
+}
+
+.rest__item-image--pool {
+  background-image: url('../img/rest-pool.png');
+}
+
+.rest__item-image--spa {
+  background-image: url('../img/rest-spa.png');
+}
+
+.rest__item-image--baths {
+  background-image: url('../img/rest-baths.png');
+}
+
+.rest__item-image--animation {
+  background-image: url('../img/rest-animation.png');
+}

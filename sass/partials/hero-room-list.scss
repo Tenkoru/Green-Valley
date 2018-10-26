@@ -1,0 +1,32 @@
+.hero-room-list {
+  @include container;
+  min-height: 200px;
+  background: $color-white url('../img/hero-room-list-bg.jpg') center top no-repeat;
+  text-align: center;
+}
+
+.hero-room-list__title {
+  margin-top: 65px;
+  margin-bottom: 10px;
+  color: $color-white;
+  font-family: "PT Serif";
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 2px;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+}
+
+.hero-room-list__text {
+  display: none;
+  color: $color-white;
+  font-size: 18px;
+
+  @media (min-width: $screen-tablet) {
+    display: inline;
+  }
+}
