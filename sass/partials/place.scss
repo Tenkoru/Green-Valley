@@ -1,15 +1,19 @@
 .place {
-  width: $screen-mobile;
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
+  margin: 0 auto;
   background: $color-teal url('../img/place-bg-mobile.png') center top no-repeat;
   background-size: cover;
 
   @media (min-width: $screen-tablet) {
-    width: $screen-tablet;
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
     background-image: url('../img/place-bg-tablet.png');
   }
 
   @media (min-width: $screen-desktop) {
     width: 100%;
+    max-width: 100%;
     background-image: url('../img/place-bg-desktop.png');
   }
 }
@@ -17,8 +21,8 @@
 .place__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: $container-mobile;
+  justify-content: space-around;
+  margin: 0 auto;
   padding-top: 41px;
   padding-right: 20px;
   padding-bottom: 30px;
@@ -28,6 +32,8 @@
 
   @media (min-width: $screen-tablet) {
     width: $container-tablet;
+    padding-top: 39px;
+    padding-bottom: 35px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -49,14 +55,14 @@
 
   @media (min-width: $screen-tablet) {
     font-size: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
 }
 
 .place__items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
 
   @media (min-width: $screen-tablet) {
@@ -84,17 +90,31 @@
   }
 }
 
+.place__image {
+  @media (min-width: $screen-tablet) {
+    height: 200px;
+  }
+}
+
 .place__info {
   margin-top: 29px;
   margin-bottom: 5px;
   font-family: "PT Serif";
   font-size: 26px;
   font-weight: normal;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 1px;
+  }
 }
 
 .place__cost {
   font-weight: 500;
   font-size: 14px;
+
+  @media (min-width: $screen-tablet) {
+    text-transform: uppercase;
+  }
 }
 
 .place__selected-text {

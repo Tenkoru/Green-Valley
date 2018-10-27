@@ -4,4 +4,12 @@
   width: 225px;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: $screen-tablet) {
+    width: 335px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    text-align: left;
+  }
 }

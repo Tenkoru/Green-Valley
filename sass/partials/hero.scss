@@ -1,20 +1,28 @@
 .hero {
-  background: $color-white url('../img/hero-bg-mobile.jpg') center top no-repeat;
+  margin: 0 auto;
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
+  padding-bottom: 160px;
+  background: $color-white url('../img/hero-bg-mobile.jpg') center bottom no-repeat;
+  background-size: cover;
 
   @media (min-width: $screen-tablet) {
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+    padding-bottom: 142px;
     background-image: url('../img/hero-bg-tablet.jpg');
   }
 
   @media (min-width: $screen-desktop) {
     width: 100%;
+    max-width: 100%;
+    padding-bottom: 0;
     background-image: url('../img/hero-bg-desktop.jpg');
   }
 }
 
 .hero__wrapper {
   @include container;
-  min-height: 300px;
-  max-width: 320px;
   padding-top: 20px;
   padding-left: 0;
   padding-right: 0;
@@ -39,7 +47,7 @@
 
   @media (min-width: $screen-tablet) {
     padding-top: 0;
-    padding-left: 30px;
+    padding-left: 21px;
     padding-right: 30px;
     width: 600px;
     text-align: left;
@@ -63,6 +71,7 @@
   @media (min-width: $screen-tablet) {
     display: inline;
     font-size: 36px;
+    line-height: 42px;
     background-color: $color-white;
   }
 }
@@ -73,7 +82,7 @@
   @media (min-width: $screen-tablet) {
     display: block;
     content: "";
-    height: 25px;
+    height: 31px;
   }
 }
 

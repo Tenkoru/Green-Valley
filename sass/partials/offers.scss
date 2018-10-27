@@ -1,21 +1,23 @@
 .offers {
   @include container;
-  max-width: $screen-mobile;
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
   padding-top: 42px;
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 30px;
 
   @media (min-width: $screen-tablet) {
-    max-width: $screen-tablet;
-    padding-top: 40px;
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+    padding-top: 33px;
   }
 
   @media (min-width: $screen-desktop) {
     max-width: $container-desktop;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 45px;
+    padding-top: 41px;
   }
 }
 
@@ -27,7 +29,14 @@
   font-size: 26px;
 
   @media (min-width: $screen-tablet) {
+    letter-spacing: 1px;
     font-size: 30px;
+  }
+}
+
+.offers__title-br {
+  @media (min-width: $screen-tablet) {
+    display: none;
   }
 }
 
@@ -38,7 +47,7 @@
 .offers__item {
   display: none;
   min-height: 300px;
-  background: url('../img/offers-bg-mobile.jpg') center top no-repeat;
+  background: url('../img/offers-bg-mobile.jpg') center center no-repeat;
   background-size: cover;
 
   @media (min-width: $screen-tablet) {

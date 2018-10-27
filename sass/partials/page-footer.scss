@@ -1,5 +1,6 @@
 .page-footer {
   @include container;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -10,11 +11,12 @@
 }
 
 .page-footer__left {
-  margin-top: 50px;
-  font-size: 14px;
+  display: none;
 
-  @media (max-width: $screen-tablet) {
-    display: none;
+  @media (min-width: $screen-tablet) {
+    display: block;
+    margin-top: 50px;
+    font-size: 14px;
   }
 }
 
@@ -28,14 +30,14 @@
 }
 
 .page-footer__right {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-top: 50px;
-  font-size: 14px;
+  display: none;
 
-  @media (max-width: $screen-tablet) {
-    display: none;
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 50px;
+    font-size: 14px;
   }
 }
 

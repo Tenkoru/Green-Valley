@@ -9,16 +9,16 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: $container-mobile;
+  max-width: $container-tablet;
   padding-left: 20px;
   padding-right: 20px;
 
   @media (min-width: $screen-tablet) {
-    max-width: $container-tablet;
+    max-width: $container-desktop;
   }
 
   @media (min-width: $screen-desktop) {
-    max-width: $container-desktop;
+    max-width: auto;
     padding-left: 10px;
     padding-right: 10px;
   }

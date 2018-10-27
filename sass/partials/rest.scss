@@ -1,16 +1,18 @@
 .rest {
   @include container;
+  box-sizing: border-box;
   padding-top: 10px;
   text-align: center;
-  background: $color-white url('../img/rest-bg-mobile.jpg') center top no-repeat;
+  background: $color-white url('../img/rest-bg-mobile.jpg') center center no-repeat;
+  background-size: cover;
 
   @media (min-width: $screen-tablet) {
-    padding-top: 30px;
+    padding-top: 9px;
     background-image: url('../img/rest-bg-tablet.jpg');
   }
 
   @media (min-width: $screen-desktop) {
-    padding-top: 30px;
+    padding-top: 31px;
     background-image: url('../img/rest-bg-tablet.jpg');
   }
 }
@@ -27,6 +29,10 @@
   font-size: 14px;
   text-transform: uppercase;
   color: #838383;
+
+  @media (min-width: $screen-tablet) {
+    margin-right: 31px;
+  }
 
   &:hover {
     color: $color-orange;
@@ -56,11 +62,12 @@
   letter-spacing: 0.6px;
 
   @media (min-width: $screen-tablet) {
-    padding-bottom: 22px;
+    padding-bottom: 25px;
   }
 
   @media (min-width: $screen-desktop) {
-    padding-bottom: 85px;
+    padding-top: 73px;
+    padding-bottom: 61px;
   }
 }
 
@@ -77,35 +84,51 @@
   line-height: 1.2;
 
   @media (min-width: $screen-tablet) {
+    margin-bottom: 28px;
     font-size: 30px;
+  }
+}
+
+.rest__title-br {
+  @media (min-width: $screen-tablet) {
+    display: none;
   }
 }
 
 .rest__text {
   font-size: 16px;
   line-height: 22px;
+
+   @media (min-width: $screen-tablet) {
+    display: block;
+    margin: 0 auto;
+    width: 610px;
+  }
 }
 
 .rest__items {
-  @include simple-list;
-  display: flex;
-  margin-top: 35px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: none;
 
-  @media (max-width: $screen-tablet) {
-    display: none;
+  @media (min-width: $screen-tablet) {
+    @include simple-list;
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 .rest__item {
-  width: 80px;
-  min-height: 80px;
-  margin-left: 27px;
-  margin-right: 27px;
-  margin-bottom: 27px;
+  @media (min-width: $screen-tablet) {
+    width: 80px;
+    min-height: 80px;
+    margin-right: 35px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    text-align: center;
+  }
 
-  @media (max-width: $screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin-left: 33px;
     margin-right: 33px;
   }

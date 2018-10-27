@@ -1,21 +1,25 @@
 .feedback {
-  width: $screen-mobile;
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
   background: $color-teal url("../img/feedback-bg-mobile.jpg") center top no-repeat;
   background-size: cover;
 
   @media (min-width: $screen-tablet) {
-    width: $screen-tablet;
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
     background-image: url("../img/feedback-bg-tablet.jpg");
   }
 
   @media (min-width: $screen-desktop) {
     width: 100%;
+    max-width: 100%;
     background-image: url("../img/feedback-bg-desktop.jpg");
   }
 }
 
 .feedback__wrapper {
   @include container;
+  box-sizing: border-box;
   max-width: 320px;
   padding-left: 0;
   padding-right: 0;
@@ -48,14 +52,18 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 
 .feedback__items {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (min-width: $screen-desktop) {
+    justify-content: center;
+  }
 }
 
 .feedback__item {
@@ -70,10 +78,13 @@
 
   @media (min-width: $screen-tablet) {
     width: 480px;
+    margin-top: 13px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: $screen-desktop) {
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
 
@@ -82,8 +93,10 @@
 }
 
 .feedback__item--active:nth-child(2) {
-  @media (max-width: $screen-tablet) {
-    display: none;
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
   }
 }
 
@@ -91,6 +104,10 @@
   width: 80px;
   height: 80px;
   margin-top: -24px;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: -26px;
+  }
 }
 
 .feedback__name {
