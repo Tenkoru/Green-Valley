@@ -1,0 +1,156 @@
+.room {
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
+  margin: 0 auto;
+  padding-top: 42px;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+  }
+}
+
+.room__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "PT Serif Caption";
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+.room__cost {
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+    order: 4;
+  }
+}
+
+.room__cost--color {
+  font-size: 18px;
+  color: $color-orange;
+}
+
+.room__content {
+  margin-top: 22px;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: 42px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.room__image-wrapper {
+  display: block;
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    margin: 0;
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+  }
+
+  @media (min-width: $screen-desktop) {
+    min-width: 0;
+    max-width: 100%;
+    width: 580px;
+    height: 400px;
+    order: 2;
+  }
+}
+
+.room__arrow {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    display: block;
+    top: 46%;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-arrow-left.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.room__arrow--left {
+  @media (min-width: $screen-tablet) {
+    left: 2%;
+  }
+}
+
+.room__arrow--right {
+  @media (min-width: $screen-tablet) {
+    right: 2%;
+    transform: rotate(180deg);
+  }
+}
+
+.room__zoom {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  right: 20px;
+  background: url("../img/icon-zoom.png") center center no-repeat;
+}
+
+.room__image {
+  width: 100%;
+  height: 100%;
+}
+
+.room__info {
+  @media (min-width: $screen-desktop) {
+    box-sizing: border-box;
+    width: 50%;
+    order: 1;
+  }
+}
+
+.room__buy-button {
+  box-sizing: border-box;
+  position: relative;
+  width: 180px;
+  margin-top: -3px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding-top: 11px;
+  padding-left: 43px;
+  color: $color-white;
+  background-color: $color-orange;
+  letter-spacing: 0.6px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-calendar.png");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 59px;
+    order: 3;
+  }
+}
