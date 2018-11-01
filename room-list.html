@@ -9,7 +9,7 @@
   </head>
   <body class="body">
     <include src="html_modules/header.html"></include>
-    <main class="main-content">
+    <main class="main-content main-content--room-list">
       <section class="hero hero-room-list">
         <h1 class="hero-room-list__title">Номера в отеле Green Valley</h1>
         <span class="hero-room-list__text">
@@ -17,6 +17,84 @@
           <br>
           4 этажа | 70 номеров
         </span>
+      </section>
+      <section class="room-list">
+        <h2 class="room-list__title">Категории</h2>
+        <ul class="room-list__list">
+          <li class="room-item">
+            <div class="room-item__header">
+              <h2 class="room-item__title">Эконом</h2>
+              <span class="room-item__cost">от <b class="room-item__cost--color">3400</b> руб./сутки</span>
+            </div>
+            <a class="room-item__image-wrapper" href="#">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/room1-mobile.jpg 1x">
+                <img class="room-item__image" src="img/room1-mobile.jpg" alt="Номер в отеле">
+              </picture>
+            </a>
+            <div class="room-item__content">
+              <p class="room-item__description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек.<br class="room-item__description-br">
+              Часть номеров с видом на Финский залив.
+              </p>
+              <button class="room-item__buy-button button">Забронировать</button>
+              <button class="room-item__info-button">Подробнее</button>
+            </div>
+          </li>
+          <li class="room-item">
+            <div class="room-item__header">
+              <h2 class="room-item__title">Стандарт</h2>
+              <span class="room-item__cost">от <b class="room-item__cost--color">4000</b> руб./сутки</span>
+            </div>
+            <a class="room-item__image-wrapper" href="#">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/room2-mobile.jpg 1x">
+                <img class="room-item__image" src="img/room2-mobile.jpg" alt="Номер в отеле">
+              </picture>
+            </a>
+            <div class="room-item__content">
+              <p class="room-item__description">В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м., состоит из гостевой и спальной зоны.
+              </p>
+              <button class="room-item__buy-button button">Забронировать</button>
+              <button class="room-item__info-button">Подробнее</button>
+            </div>
+          </li>
+          <li class="room-item">
+            <div class="room-item__header">
+              <h2 class="room-item__title">Стандарт +</h2>
+              <span class="room-item__cost">от <b class="room-item__cost--color">4500</b> руб./сутки</span>
+            </div>
+            <a class="room-item__image-wrapper" href="#">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/room3-mobile.jpg 1x">
+                <img class="room-item__image" src="img/room3-mobile.jpg" alt="Номер в отеле">
+              </picture>
+            </a>
+            <div class="room-item__content">
+              <p class="room-item__description">В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек.<br class="room-item__description-br">Площадь номера от 35 кв.м.
+              </p>
+              <button class="room-item__buy-button button">Забронировать</button>
+              <button class="room-item__info-button">Подробнее</button>
+            </div>
+          </li>
+          <li class="room-item">
+            <div class="room-item__header">
+              <h2 class="room-item__title">Люкс</h2>
+              <span class="room-item__cost">от <b class="room-item__cost--color">5700</b> руб./сутки</span>
+            </div>
+            <a class="room-item__image-wrapper" href="#">
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/room4-mobile.jpg 1x">
+                <img class="room-item__image" src="img/room4-mobile.jpg" alt="Номер в отеле">
+              </picture>
+            </a>
+            <div class="room-item__content">
+              <p class="room-item__description">В отеле 5 таких номера. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнен в оригинальном cтиле.
+              </p>
+              <button class="room-item__buy-button button">Забронировать</button>
+              <button class="room-item__info-button">Подробнее</button>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <include src="html_modules/footer.html"></include>

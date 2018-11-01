@@ -26,6 +26,7 @@
   text-align: center;
   padding-top: 61px;
   padding-bottom: 50px;
+  position: relative;
 
   @media (min-width: $screen-tablet) {
     padding-left: 20px;
@@ -36,6 +37,36 @@
     padding-top: 45px;
     padding-right: 10px;
     padding-left: 10px;
+  }
+}
+
+.feedback__arrow {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    display: block;
+    top: 46%;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-arrow-left.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.feedback__arrow--left {
+  @media (min-width: $screen-tablet) {
+    left: 11%;
+  }
+}
+
+.feedback__arrow--right {
+  @media (min-width: $screen-tablet) {
+    right: 11%;
+    transform: rotate(180deg);
   }
 }
 

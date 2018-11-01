@@ -1,0 +1,158 @@
+.room-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: 1px solid $color-lighterGrey;
+  border-bottom: 1px solid $color-lighterGrey;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    width: 580px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 75px;
+    padding-left: 75px;
+    border-right: 1px solid $color-lighterGrey;
+    border-left: 1px solid $color-lighterGrey;
+  }
+
+  @media (min-width: $screen-desktop) {
+    min-width: 1180px;
+    min-height: 305px;
+    box-sizing: border-box;
+    padding-left: 30px;
+  }
+}
+
+.room-item__header {
+  @media (min-width: $screen-desktop) {
+    width: 50%;
+  }
+}
+
+.room-item__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-family: "PT Serif";
+  font-size: 26px;
+  line-height: 19px;
+  font-weight: normal;
+}
+
+.room-item__cost {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+}
+
+.room-item__cost--color {
+  color: $color-orange;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.room-item__image-wrapper {
+  display: block;
+  margin-top: 23px;
+
+  @media (min-width: $screen-desktop) {
+    width: 50%;
+    min-height: 305px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+  }
+}
+
+.room-item__image {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $screen-tablet) {
+    height: 300px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    height: 305px;
+  }
+}
+
+.room-item__content {
+  margin-top: 29px;
+  padding-right: 19px;
+  padding-left: 19px;
+
+  @media (min-width: $screen-tablet) {
+    width: 380px;
+    margin-top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 410px ;
+    margin-right: 0;
+    margin-top: 28px;
+    margin-left: 60px;
+  }
+}
+
+.room-item__description {
+  min-height: 113px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $screen-tablet) {
+    min-height: auto;
+  }
+}
+
+.room-item__buy-button {
+  display: block;
+  margin-top: 33px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: $color-white;
+  background-color: $color-orange;
+  letter-spacing: 0.7px;
+
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+  }
+}
+
+.room-item__info-button {
+  display: block;
+  margin-top: 23px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  border-bottom: 1px dashed $color-black;
+  background-color: $color-white;
+  text-transform: uppercase;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+    margin-left: 66px;
+  }
+}
