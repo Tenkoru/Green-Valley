@@ -1,0 +1,119 @@
+.house-features {
+  display: none;
+}
+
+.house-features--active {
+  @include simple-list;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 20px;
+  border-top: 1px solid $color-lighterGrey;
+  border-bottom: 1px solid $color-lighterGrey;
+  background-color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 100%;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &::after {
+      transform: translateX(1px);
+      border-color: transparent transparent $color-white transparent;
+      border-width: 7px;
+      border-bottom-width: 16px;
+    }
+
+    &::before {
+      border-color: transparent transparent $color-lighterGrey transparent;
+      border-width: 8px;
+      border-bottom-width: 16px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    justify-content: space-around;
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid $color-lighterGrey;
+  }
+}
+
+.house-features--flagman::before,
+.house-features--flagman::after {
+  left: 11%;
+}
+
+.house-features--lake::before,
+.house-features--lake::after {
+  left: 36%;
+}
+
+.house-features--alder::before,
+.house-features--alder::after {
+  left: 61%;
+}
+
+.house-features--port::before,
+.house-features--port::after {
+  left: 86%;
+}
+
+.house-features__item {
+  position: relative;
+  width: 135px;
+  padding-top: 82px;
+  padding-bottom: 14px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background:transparent url('../img/sprites.png') left top no-repeat;
+  }
+}
+
+.house-features__item--square::before {
+  width: 45px;
+  height: 45px;
+  background-position: 2px -354px;
+}
+
+.house-features__item--rooms::before {
+  width: 27px;
+  height: 43px;
+  background-position: 0px -198px;
+}
+
+.house-features__item--sleep::before {
+  width: 55px;
+  height: 43px;
+  background-position: 0px -253px;
+}
+
+.house-features__item--bath::before {
+  width: 52px;
+  height: 28px;
+  background-position: 0px -409px;
+}
+
+.house-features__item--wifi::before {
+  width: 50px;
+  height: 42px;
+  background-position: 0px -308px;
+}

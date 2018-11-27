@@ -1,0 +1,69 @@
+.place-type {
+  margin: 20px auto 0;
+  width: 285px;
+  border: 1px solid $color-lighterGrey;
+
+  @media (min-width: $screen-tablet) {
+    width: 330px;
+  }
+}
+
+.place-type__title {
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-grey;
+  text-transform: uppercase;
+}
+
+.place-type__type {
+  display: inline-block;
+  position: relative;
+  width: 138px;
+  height: 125px;
+  padding-top: 33px;
+}
+
+.place-type__type::before {
+  position: absolute;
+  content: '';
+  width: 82px;
+  height: 64px;
+  bottom: 31px;
+  left: 28px;
+  opacity: 0.4;
+}
+
+.place-type__type--active::before {
+  opacity: 1;
+}
+
+.place-type__type--hotel {
+  @media (min-width: $screen-tablet) {
+    margin-right: 20px;
+    padding-right: 27px;
+  }
+}
+
+.place-type__type--hotel::before {
+  background:transparent url('../img/icon-hotel.png') left top no-repeat;
+}
+
+.place-type__type--hotel::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 107px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-lighterGrey;
+}
+
+.place-type__type--cottage::before {
+  background:transparent url('../img/icon-house.png') left top no-repeat;
+}
+
+.place-type__input {
+  visibility: hidden;
+  position: absolute;
+}

@@ -1,0 +1,62 @@
+.step {
+  padding-top: 46px;
+  padding-bottom: 40px;
+}
+
+.step--2 {
+  padding-bottom: 60px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 105px;
+  }
+}
+
+.step--3 {
+  padding-bottom: 50px;
+}
+
+.step--4 {
+  padding-bottom: 18px;
+
+  @media (min-width: $screen-tablet) {
+    padding-bottom: 22px;
+  }
+}
+
+.step--5 {
+  padding-top: 43px;
+}
+
+.step--grey-bg {
+  background-color: $color-form-bg;
+}
+
+.step__number {
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-step-number;
+}
+
+.step__title {
+  margin-top: 9px;
+  margin-bottom: 0;
+  font-family: "PT Serif";
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 19px;
+}
+
+.step__title--bigger-line-height {
+  line-height: 32px;
+}
+
+.step__title--bigger-margin {
+  margin-top: 1px;
+}

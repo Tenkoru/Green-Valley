@@ -1,0 +1,48 @@
+.form {
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.form__header {
+  padding-top: 66px;
+  padding-bottom: 45px;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "PT Serif Caption";
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.form__description {
+  margin: 0 auto;
+  width: 230px;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $screen-tablet) {
+    width: 450px;
+  }
+}
+
+.form__description--color-orange {
+  font-weight: 500;
+  color: $color-orange;
+}

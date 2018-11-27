@@ -1,0 +1,323 @@
+.payment {
+  display: flex;
+  flex-direction: column;
+  margin-top: 43px;
+
+  @media (min-width: $screen-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.payment__type {
+  @media (min-width: $screen-tablet) {
+    width: 62%;
+    order: 2;
+  }
+}
+
+.payment__pay {
+  margin-bottom: 20px;
+  background-color: $color-white;
+  border-top: 1px solid $color-lighterGrey;
+  border-bottom: 1px solid $color-lighterGrey;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top: 22px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    border-left: 1px solid $color-lighterGrey;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-left: 23px;
+    border-right: 1px solid $color-lighterGrey;
+  }
+}
+
+.payment__pay--now {
+  padding-bottom: 7px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+}
+
+.payment__pay--later {
+  margin-bottom: 23px;
+}
+
+.payment__card-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $screen-tablet) {
+    order: 3;
+  }
+}
+
+.payment__title {
+  position: relative;
+  width: 240px;
+  margin: 14px auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 77px;
+  text-align: left;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 12px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-119px,-50%);
+    z-index: 50;
+    background: transparent url('../img/sprites.png') left top no-repeat;
+    background-position: -214px -67px;
+
+    @media (min-width: $screen-tablet) {
+      left: 0;
+      top: 0;
+      order: 1;
+      transform: none;
+    }
+
+    @media (min-width: $screen-desktop) {
+      padding-left: 36px;
+    }
+  }
+
+  &--active::before {
+    background-position: -263px -68px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    width: 20%;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 40px;
+  }
+}
+
+.payment__title--less-margin {
+  margin-bottom: 17px;
+}
+
+.payment__description {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+    width: 60%;
+    order: 2;
+    margin: 0;
+    margin-left: 16px;
+    text-align: left;
+    font-family: "Fira Sans";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.7px;
+    color: $color-grey;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-left: 14px;
+  }
+}
+
+.payment__label {
+  display: block;
+  margin: 0 auto 17px;
+  width: 240px;
+
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+    width: 58%;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+.payment__label--card-number {
+  order: 3;
+}
+
+.payment__label--card-cvv {
+  order: 4;
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 17px;
+      top: -1px;
+      right: 14px;
+      background:transparent url('../img/sprites.png') left top no-repeat;
+      background-position: -115px -114px;
+    }
+  }
+}
+
+.payment__label--card-holder {
+  order: 5;
+}
+
+.payment__label--card-exp-date {
+  order: 6;
+}
+
+.payment__label--left {
+  text-align: left;
+
+  @media (min-width: $screen-tablet) {
+    margin-left: 20px;
+    width: 37%;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-left: 13px;
+  }
+}
+
+.payment__label-desc {
+  display: block;
+  text-align: left;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-grey;
+}
+
+.payment__input-text {
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px solid $color-lighterGrey;
+  text-align: center;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &:focus {
+    outline: none;
+    border-color: $color-lightGrey;
+  }
+}
+
+.payment__input-text::placeholder {
+  color: $color-lightGrey;
+}
+
+.payment__input-text--half-width {
+  width: 63%;
+}
+
+.payment__cost-block {
+  padding-top: 22px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  border: 1px solid $color-lighterGrey;
+  background-color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    box-sizing: border-box;
+    width: 36%;
+    order: 1;
+    padding-right: 23px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-left: 19px;
+  }
+}
+
+.payment__cost-title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-grey;
+}
+
+.payment__cost {
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 18px;
+  color: $color-black;
+}
+
+.payment__error {
+  position: relative;
+  margin-top: 13px;
+  margin-bottom: 0;
+  text-indent: 17px;
+  text-align: left;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    background:transparent url('../img/sprites.png') left top no-repeat;
+    background-position: -116px -66px;
+    z-index: 50;
+  }
+}
+
+.payment__error-link {
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  border-bottom: 1px dashed $color-black;
+  letter-spacing: 0.9px;
+  color: $color-grey;
+
+  &:visited {
+    color: $color-grey;
+  }
+}

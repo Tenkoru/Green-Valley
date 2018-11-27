@@ -1,0 +1,115 @@
+.date {
+  @media (min-width: $screen-desktop) {
+    display: inline-block;
+    margin-top: 30px;
+    border: 1px solid $color-lighterGrey;
+    background-color: $color-white;
+  }
+}
+
+.date__inn {
+  position: relative;
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+    margin-right: 14px;
+  }
+
+  &::after {
+    @media (min-width: $screen-desktop) {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 88px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-lighterGrey;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-right: 0;
+    padding-right: 27px;
+    padding-bottom: 53px;
+    padding-left: 27px;
+  }
+}
+
+.date__out {
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-right: 27px;
+    padding-bottom: 53px;
+    padding-left: 27px;
+  }
+}
+
+.date__title {
+  margin-top: 37px;
+  margin-bottom: 0;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-grey;
+  letter-spacing: 0.7px;
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 25px;
+  }
+}
+
+.date__date {
+  width: 21px;
+  height: 48px;
+  padding-top: 0;
+  padding-right: 17px;
+  padding-bottom: 0;
+  padding-left: 17px;
+  border-top: 1px solid $color-lighterGrey;
+  border-right: none;
+  border-bottom: 1px solid $color-lighterGrey;
+  border-left: 1px solid $color-lighterGrey;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-teal;
+
+  &:focus {
+    outline: none;
+    border-color: $color-lightGrey;
+  }
+
+  &::placeholder {
+    color: $color-lightGrey;
+  }
+
+  @media (min-width: $screen-desktop) {
+    height: 25px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+.date__date--year {
+  width: 30px;
+  border-right: 1px solid $color-lighterGrey;
+}
+
+.date__data {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $screen-desktop) {
+    margin-top: 15px;
+  }
+}

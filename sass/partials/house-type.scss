@@ -1,0 +1,76 @@
+.house-type {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  border-top: 1px solid $color-lighterGrey;
+  border-bottom: 1px solid $color-lighterGrey;
+  background-color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    padding-top: 46px;
+    padding-bottom: 42px;
+    border: 1px solid $color-lighterGrey;
+  }
+
+  @media (min-width: 769px) {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.house-type__title {
+  display: block;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-lightGrey;
+
+  @media (min-width: $screen-tablet) {
+    width: 100%;
+  }
+}
+
+.house-type__title::after {
+  @media (min-width: $screen-tablet) {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 88px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-lighterGrey;
+  }
+}
+
+.house-type__title--active {
+  color: $color-black;
+}
+
+.house-type__title--active::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-445%,-50%);
+  background: transparent url('../img/sprites.png') left top no-repeat;
+  background-position: -263px -68px;
+
+  @media (min-width: $screen-tablet) {
+    top: 100%;
+    transform: translate(-50%, -25%);
+  }
+}
+
+.house-type__type {
+  display: none;
+}

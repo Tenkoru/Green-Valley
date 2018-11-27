@@ -1,4 +1,3 @@
-@import "normalize";
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/visually-hidden";
@@ -23,5 +22,14 @@
 @import "partials/room";
 @import "partials/info";
 @import "partials/more-rooms";
+@import "partials/form";
+@import "partials/steps";
+@import "partials/step";
+@import "partials/date";
+@import "partials/place-type";
+@import "partials/house-type";
+@import "partials/house-features";
+@import "partials/personal";
+@import "partials/payment";
 @import "partials/page-footer";
 @import "partials/social";

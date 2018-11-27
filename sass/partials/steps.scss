@@ -1,0 +1,45 @@
+.steps {
+  min-width: $screen-mobile;
+  max-width: $container-tablet;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    min-width: $screen-tablet;
+    max-width: $container-desktop;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.steps__submit {
+  width: 87%;
+  margin-top: 10px;
+  padding-top: 16px;
+  padding-right: 0;
+  padding-bottom: 16px;
+  padding-left: 0;
+  border: none;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background-color: $color-teal;
+
+  @media (min-width: $screen-tablet) {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

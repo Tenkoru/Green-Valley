@@ -1,0 +1,85 @@
+.personal {
+  padding-top: 33px;
+
+  @media (min-width: $screen-tablet) {
+    max-width: $screen-tablet;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 25px;
+  }
+}
+
+.personal__label {
+  display: inline-block;
+  position: relative;
+  width: 87%;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 12px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-119px,-50%);
+    z-index: 50;
+  }
+
+  &--valid::before {
+    background: transparent url('../img/sprites.png') left top no-repeat;
+    background-position: -263px -68px;
+  }
+
+  &--invalid::before {
+    width: 13px;
+    height: 13px;
+    background: transparent url('../img/icon-invalid.png') left top no-repeat;
+  }
+
+  @media (min-width: $screen-tablet) {
+    width: 48%;
+  }
+}
+
+.personal__input {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 0;
+  padding: 0;
+  border: 1px solid $color-lighterGrey;
+  text-align: center;
+  font-family: "Fira Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &:focus {
+    outline: none;
+    border-color: $color-lightGrey;
+  }
+}
+
+.personal__input::placeholder {
+  color: $color-lightGrey;
+}
+
+.personal__tip {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-grey;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: 17px;
+  }
+}
