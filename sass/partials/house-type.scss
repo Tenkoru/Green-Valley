@@ -8,8 +8,8 @@
 
   @media (min-width: $screen-tablet) {
     display: flex;
-    padding-top: 46px;
-    padding-bottom: 42px;
+    padding-top: 0;
+    padding-bottom: 0;
     border: 1px solid $color-lighterGrey;
   }
 
@@ -34,6 +34,8 @@
 
   @media (min-width: $screen-tablet) {
     width: 100%;
+    padding-top: 62px;
+    padding-bottom: 58px;
   }
 }
 
@@ -66,8 +68,8 @@
   background-position: -263px -68px;
 
   @media (min-width: $screen-tablet) {
-    top: 100%;
-    transform: translate(-50%, -25%);
+    top: 67%;
+    transform: translate(-50%, 0);
   }
 }
 

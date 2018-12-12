@@ -14,16 +14,37 @@
         <h2 class="room__title">Эконом</h2>
         <span class="room__cost">от <b class="room__cost--color">3400</b> руб./сутки</span>
         <div class="room__content">
-          <a class="room__image-wrapper" href="#">
+          <div class="room__slider">
             <button class="room__arrow room__arrow--left"></button>
             <button class="room__arrow room__arrow--right"></button>
             <div class="room__zoom"></div>
-            <picture>
-              <source media="(max-width: 767px)" srcset="img/single-room-mobile.jpg 1x">
-              <source media="(max-width: 1199px)" srcset="img/single-room-tablet.jpg 1x">
-              <img class="room__image" src="img/single-room-desktop.jpg" alt="Номер в отеле">
-            </picture>
-          </a>
+            <ul class="room__images">
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+              <li data-thumb="img/single-room-desktop.jpg" data-src="img/single-room-full.jpg">
+                <img class="room__image" src="img/single-room-desktop.jpg" />
+              </li>
+            </ul>
+          </div>
           <div class="room__info info">
             <div class="info__block">
               <h3 class="info__title">О номере</h3>
@@ -85,6 +106,9 @@
       </section>
     </main>
     <include src="html_modules/footer.html"></include>
-    <script src="js/script.js"></script>
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery/lightslider.js"></script>
+    <script src="js/jquery/lightgallery.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

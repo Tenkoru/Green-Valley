@@ -52,7 +52,7 @@
   }
 }
 
-.room__image-wrapper {
+.room__content .usingCss {
   display: block;
 
   @media (min-width: $screen-tablet) {
@@ -67,6 +67,14 @@
     max-width: 100%;
     width: 580px;
     height: 400px;
+    order: 2;
+  }
+}
+
+.room__slider {
+  position: relative;
+  z-index: 500;
+  @media (min-width: $screen-desktop) {
     order: 2;
   }
 }
@@ -102,12 +110,17 @@
 }
 
 .room__zoom {
+  display: none;
   position: absolute;
   width: 22px;
   height: 22px;
   top: 20px;
   right: 20px;
   background: url("../img/icon-zoom.png") center center no-repeat;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+  }
 }
 
 .room__image {

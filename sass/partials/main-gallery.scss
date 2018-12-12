@@ -1,18 +1,21 @@
 .main-gallery {
-  width: $screen-mobile;
-  height: 260px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
-  background: red;
 
   @media (min-width: $screen-tablet) {
-    width: $screen-tablet;
-    height: 400px;
+    min-height: 400px;
   }
 
   @media (min-width: $screen-desktop) {
-    width: $container-desktop;
+    max-width: $container-desktop;
     margin-bottom: 39px;
-    height: 616px;
+    min-height: 616px;
   }
+}
+
+.main-gallery__image {
+  display: block;
+  width: 100%;
 }

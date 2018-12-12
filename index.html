@@ -88,20 +88,49 @@
           </div>
         </div>
       </section>
-      <section class="main-gallery"></section>
+      <section class="main-gallery">
+        <ul class="main-gallery__list">
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+          <li data-thumb="img/slider-mobile.jpg" data-src="img/slider-desktop.jpg">
+            <img class="main-gallery__image" src="img/slider-desktop.jpg" />
+          </li>
+        </ul>
+      </section>
       <section class="feedback">
         <div class="feedback__wrapper">
           <h2 class="feedback__title">Отзывы</h2>
-          <button class="feedback__arrow feedback__arrow--left"></button>
-          <button class="feedback__arrow feedback__arrow--right"></button>
-          <div class="feedback__items">
-            <article class="feedback__item feedback__item--active">
+          <div class="feedback__controls">
+            <button class="feedback__arrow feedback__arrow--left lSPrev"></button>
+            <button class="feedback__arrow feedback__arrow--right lSNext"></button>
+          </div>
+          <div class="feedback__items cs-hidden">
+            <article class="feedback__item">
               <img class="feedback__picture" src="img/feedback-picture.png" alt="Фото">
               <span class="feedback__name">1 Екатерина В.</span>
               <p class="feedback__text">1 Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!</p>
               <span class="feedback__date">1 Дата отдыха:<br> 01.06.2015 - 08.06.2015</span>
             </article>
-            <article class="feedback__item feedback__item--active">
+            <article class="feedback__item">
               <img class="feedback__picture" src="img/feedback-picture.png" alt="Фото">
               <span class="feedback__name">2 Екатерина В.</span>
               <p class="feedback__text">2 Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!</p>
@@ -138,7 +167,7 @@
       <section class="offers">
         <h2 class="offers__title">Акции<br class="offers__title-br"> и предложения</h2>
         <div class="offers__slider">
-          <div class="offers__item offers__item--active">
+          <div class="offers__item">
             <div class="offers__item-info">
               <h3 class="offers__item-title">Скидки в мае 1</h3>
               <p class="offers__item-description">Забронируйте номер или коттедж любой категории до 31 июня
@@ -223,6 +252,9 @@
       </section>
     </main>
     <include src="html_modules/footer.html"></include>
-    <script src="js/script.js"></script>
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery/lightslider.js"></script>
+    <script src="js/jquery/lightgallery.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

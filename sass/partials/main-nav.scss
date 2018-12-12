@@ -78,20 +78,18 @@
 .main-nav__link--active {
   color: $color-orange;
 
-  &::after {
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    content: "";
-    left: 50%;
-    bottom: 27px;
-    transform: translateX(-50%);
-    background-color: $color-orange;
+  @media (min-width: $screen-desktop) {
+    &::after {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      content: "";
+      left: 50%;
+      bottom: 27px;
+      transform: translateX(-50%);
+      background-color: $color-orange;
+    }
   }
-}
-
-.main-nav__list--active {
-  display: flex;
 }
 
 .main-nav__button {

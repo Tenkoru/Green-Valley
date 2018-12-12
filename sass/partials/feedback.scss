@@ -3,6 +3,7 @@
   max-width: $container-tablet;
   background: $color-teal url("../img/feedback-bg-mobile.jpg") center top no-repeat;
   background-size: cover;
+  margin: 0 auto;
 
   @media (min-width: $screen-tablet) {
     min-width: $screen-tablet;
@@ -29,11 +30,13 @@
   position: relative;
 
   @media (min-width: $screen-tablet) {
+    width: 480px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   @media (min-width: $screen-desktop) {
+    width: 980px;
     padding-top: 45px;
     padding-right: 10px;
     padding-left: 10px;
@@ -43,7 +46,7 @@
 .feedback__arrow {
   display: none;
 
-  @media (min-width: $screen-tablet) {
+  @media (min-width: $screen-desktop) {
     width: 35px;
     height: 40px;
     position: absolute;
@@ -58,15 +61,22 @@
 }
 
 .feedback__arrow--left {
-  @media (min-width: $screen-tablet) {
+  @media (min-width: $screen-desktop) {
     left: 11%;
   }
 }
 
 .feedback__arrow--right {
-  @media (min-width: $screen-tablet) {
+  @media (min-width: $screen-desktop) {
     right: 11%;
     transform: rotate(180deg);
+  }
+}
+
+.feedback__items {
+  margin: 0 auto;
+  @media (min-width: $screen-desktop) {
+    width: 980px;
   }
 }
 
@@ -87,21 +97,11 @@
   }
 }
 
-.feedback__items {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-  @media (min-width: $screen-desktop) {
-    justify-content: center;
-  }
-}
-
 .feedback__item {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 26px;
   margin-bottom: 39px;
   padding-bottom: 24px;
   align-items: center;
@@ -109,13 +109,10 @@
 
   @media (min-width: $screen-tablet) {
     width: 480px;
-    margin-top: 13px;
+    margin-top: 26px;
+    margin-right: auto;
     margin-bottom: 44px;
-  }
-
-  @media (min-width: $screen-desktop) {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-left: auto;
   }
 }
 
@@ -123,17 +120,9 @@
   display: flex;
 }
 
-.feedback__item--active:nth-child(2) {
-  display: none;
-
-  @media (min-width: $screen-tablet) {
-    display: flex;
-  }
-}
-
 .feedback__picture {
-  width: 80px;
-  height: 80px;
+  width: 80px !important;
+  height: 80px !important;
   margin-top: -24px;
 
   @media (min-width: $screen-tablet) {
